@@ -1,0 +1,10 @@
+applications:
+- name: twdAPIGateway
+  memory: 512M
+  instances: 1
+  path: ./target/twdAPIGateway-0.0.1-SNAPSHOT.war
+  random-route: true
+  buildpack: liberty-for-java
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+# github push test
